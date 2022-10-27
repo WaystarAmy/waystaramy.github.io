@@ -18,7 +18,7 @@
                 <button ng-click="Adder.AddItem();">Add Item</button>
             </div>
         </div>
-        <h2>List of Item:</h2>
+        <h2>List of Items:</h2>
         <div ng-controller="ListerController as Listers">
             <ol>
                 <li ng-repeat="item in Listers.Items">{{ item }}<button ng-click="Listers.RemoveItem($index);">Remove Item</button></li>
