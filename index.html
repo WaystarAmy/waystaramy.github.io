@@ -1,33 +1,11 @@
 <html>
     <head>
         <title>
-            Random Selector
+            Amy's Creations
         </title>
-        <!-- <script src="./node_modules/angular/angular.min.js"></script> -->
-        <script src="angular.min.js"></script>
-        <script src="app.js"></script>
-        <style body { font-size: 1.3em; }></style>
     </head>
-    <body ng-app="Randomizer">
-        <h1>Random Picker</h1>
-        <div ng-controller="AdderController as Adder">
-            <div>
-                Item to Add:
-                <input type="text" 
-                ng-model="Adder.Item">
-                <button ng-click="Adder.AddItem();">Add Item</button>
-            </div>
-        </div>
-        <div ng-controller="ListerController as Listers">
-            <ol>
-                <li ng-repeat="item in Listers.Items">{{ item }}<button ng-click="Listers.RemoveItem($index);">Remove Item</button></li>
-            </ol>
-        </div>
-        <div ng-controller="RandomlySelectedController as RandomlySelected">
-            <button ng-click="RandomlySelected.GetRandomItem();">Select Random Item</button>
-            <H2>{{RandomlySelected.Item}}</H2>
-        </div>
-
-
+    <body>
+        <a href="RandomItemFinder.html">Random Item Finder</a>
+        Make a list of Random Items and then press button to select something at random.
     </body>
 </html>
