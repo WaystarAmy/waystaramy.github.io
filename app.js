@@ -25,7 +25,7 @@
         this.RemoveItem = function(itemIndex)
         {
             RandomizerService.RemoveItem(itemIndex);
-        }
+        };
     };
     RandomlySelectedController.$inject = ['RandomizerService'];
     function RandomlySelectedController(RandomizerService)
@@ -45,7 +45,10 @@
                 items.push(itemName);
             }
         };
-        this.RemoveItem =function(itemIndex){items.slice(itemIndex,1);};
+        this.RemoveItem =function(itemIndex){
+            items.splice(itemIndex,1);
+            console.log(items);
+        };
         this.PickRandomItem = function(){
             var randomIndex = Math.floor(Math.random() * items.length);
             return items[randomIndex];
