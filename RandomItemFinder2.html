@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>
+            Random Selector
+        </title>
+        <!-- <script src="./node_modules/angular/angular.min.js"></script> -->
+        <script src="angular.min.js"></script>
+        <script src="app2.js"></script>
+        <style body { font-size: 1.3em; }></style>
+    </head>
+    <body ng-app="Randomizer">
+        <div ng-controller="AdderController as Adder">
+            <h1>Random Picker</h1>
+            <div>
+                Item to Add to list:
+                <input type="text" 
+                ng-model="Adder.Item">
+                <button ng-click="Adder.AddItem();">Add Item</button>
+            </div>
+            <h2>List of Items:</h2>
+            <div>
+            <ol>
+                <li ng-repeat="item in Adder.Items">{{ item }}<button ng-click="Adder.RemoveItem($index);">Remove Item</button></li>
+            </ol>
+            <button ng-click="Adder.GetRandomItem();">Select Random Item</button>
+            <H2>{{Adder.RandomItem}}</H2>
+            </div>
+        </div>
+
+    </body>
+</html>
